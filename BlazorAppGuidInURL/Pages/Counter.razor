@@ -1,5 +1,6 @@
 ﻿@page "/counter/{OrgLocationID:guid}/{Latitude:double}/{Longitude:double}"
-
+@page "/counter/{Latitude:double}/{Longitude:double}"
+@page "/counter/{Name}"
 
 <PageTitle>Counter</PageTitle>
 
@@ -20,6 +21,9 @@
 
     [Parameter]
     public double Longitude { get; set; }
+
+    [Parameter]
+    public string Name { get; set; }
 
     private void IncrementCount()
     {
